@@ -2,11 +2,14 @@ const nome = 'Luiz Otávio';
 const sobrenome = 'Miranda';
 const idade = 30;
 const peso = 84;
-const altura = 180 / 100; // Dividimos por 100 para ter o valor em metros. => 1.8
+const alturaEmM = 1.80;
 
 // => /: Divisão
 // => *: Multiplicação
-const imc = peso / (altura * altura);
+let indiceMassaCorporal= peso / (alturaEmM * alturaEmM);
+let anoNascimento = 2024 - idade;
 
 // Template String para a concatenação
-console.log(`${nome} ${sobrenome} tem ${idade}, pesa ${peso}, tem ${altura} cm de altura e seu IMC é ${imc}`)
+console.log(`${nome} ${sobrenome} tem ${idade} anos, pesa ${peso} kg`);
+console.log(`tem ${alturaEmM} de altura e seu IMC é de ${indiceMassaCorporal}`);
+console.log(`${nome} nasceu em ${anoNascimento}.`);
