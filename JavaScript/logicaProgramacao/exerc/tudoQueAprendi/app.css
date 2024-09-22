@@ -1,0 +1,16 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkcyan;
+}
+
+#app {
+  width: 80%;
+  background-color: #fff;
+  height: 100vh;
+  margin: auto;
+}
