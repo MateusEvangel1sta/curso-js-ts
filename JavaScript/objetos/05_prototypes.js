@@ -10,8 +10,24 @@
 function Pessoa(nome, sobrenome) {
   this.nome = nome;
   this.sobrenome = sobrenome;
-  this.nomeCompleto = () => `${this.nome} ${this.sobrenome}`;
 }
 
+// Criando metódo dentro do prototype
+Pessoa.prototype.nomeCompleto = function() {
+  return `${this.nome} ${this.sobrenome}`;
+}
+
+Pessoa.prototype.estouAqui = 'Hahahaha';
+
 const pessoa1 = new Pessoa('Luiz', 'O.'); // <- Pessoa = Função construtora
+const pessoa2 = new Pessoa('Maria', 'A.'); // <- Pessoa = Função construtora
 const data = new Date(); // <-- Date = Função contrutora
+
+console.log(pessoa1);
+
+console.log(pessoa1.estouAqui);
+console.log(pessoa2.nomeCompleto());
+
+
+// prototype
+console.log(Pessoa.prototype === pessoa1.__proto__);
