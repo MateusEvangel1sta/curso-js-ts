@@ -19,7 +19,7 @@ function criaPessoa(nome, sobrenome, altura, peso) {
       novoNome = novoNome.split(' '); // Pega a string, e a separa usando o caractere ' '. Adiciona todos os valores separados dentro de um array.
 
       this.nome = novoNome.shift(); // Atribiu à `nome`, o primeiro elemento do array.
-      this.nome = novoNome.shift();
+      this.sobrenome = novoNome.shift();
     },
 
     altura,
