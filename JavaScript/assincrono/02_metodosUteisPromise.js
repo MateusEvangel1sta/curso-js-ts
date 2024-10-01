@@ -28,6 +28,7 @@ Promise.all(promises)
   .then(function(valor) {
     console.log(valor);
   })
+  .catch()
 
 // Promise.race -->
 // Promise.resolve -->
