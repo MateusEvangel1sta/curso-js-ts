@@ -7,29 +7,61 @@ function rand(min, max) {
 
 function esperaAi(msg, tempo) {
   return new Promise((resolve, reject) => {
-    if (typeof msg != 'string') reject(false);
     
     setTimeout(() => {
-      resolve(msg);
+      if (typeof msg != 'string') {
+        reject('Caí no erro!');
+        return
+      }
+      
+      resolve(msg.toUpperCase() + ' - Passei na Promise');
+      return
     }, tempo);
   });
 }
 
-// Promise.all --> Passar uma array com promessas, irá me entregar uma promessa com um array dos os valores.
+// Promise.all --> Passar uma array com promessas, irá me entregar uma promessa com um array dos valores.
 const promises = [
-  'Primeiro valor',
+  // 'Primeiro valor',
   esperaAi('Promise 1', rand(1, 3)),
   esperaAi('Promise 2', rand(1, 3)),
+  // 'Um outro valor aqui no meio',
   esperaAi('Promise 3', rand(1, 3)),
-  'Outro valor'
+  // esperaAi(1000, rand(1, 3)), // Erro!
+  // 'Outro valor'
 ];
 
 Promise.all(promises)
   .then(function(valor) {
     console.log(valor);
   })
-  .catch()
+  .catch(function(erro) {
+    console.log(erro);
+  });
 
-// Promise.race -->
-// Promise.resolve -->
-// Promise.reject -->
+// Promise.race --> Corrida. A primeira que resolver, me entregue o valor.
+Promise.race(promises)
+  .then((valor) => {
+    console.log(valor);
+  }).catch(e => {
+    console.log(e);
+  });
+
+/////
+
+function baixaPagina() {
+  const emCache = true;
+
+  if(emCache) {
+    // Promise.reject --> Entrega uma Promisa jpa em rejeitada.
+    // Promise.resolve --> Entrega uma Promise já resolvida.
+    return Promise.resolve('Página em cache');
+  } else {
+    return esperaAi('Baixei a página', 3000);
+  }
+}
+
+baixaPagina()
+  .then(daodsPagina => {
+    console.log(daodsPagina);
+  }).catch(e => console.log(e));
