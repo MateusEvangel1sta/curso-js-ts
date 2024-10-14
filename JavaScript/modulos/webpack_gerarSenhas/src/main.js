@@ -1,3 +1,5 @@
-import { geraMaiuscula } from './modules/geradores';
+import formGeraSenha from "./modules/formGeraSenha";
 
-import './assets/css/style.css';
+import "./assets/css/style.css";
+
+formGeraSenha();
