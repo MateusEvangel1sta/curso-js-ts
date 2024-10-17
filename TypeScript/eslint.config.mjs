@@ -37,5 +37,9 @@ export default [...compat.extends(
         sourceType: "module",
     },
 
-    rules: {},
+    rules: {
+        "prettier/prettier": ["error", {
+            endOfLine: "auto",
+        }],
+    },
 }];
