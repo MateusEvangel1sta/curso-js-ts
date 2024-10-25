@@ -23,3 +23,9 @@ export function toMaiusculo(...args: string[]): string[] {
 
 const tudoMaiusculo = toMaiusculo('O planeta', 'Computador', 'Cadeira');
 console.log(tudoMaiusculo);
+
+// Array imutável
+const arrayUm: readonly string[] = ['Luiz', 'Otávio'];
+const arrayDois: ReadonlyArray<string> = ['Luiz', 'Otávio'];
+
+console.log(arrayUm, arrayDois);
