@@ -13,7 +13,7 @@ const dadosClienteTres: [number, string, string?] = [1, 'Luiz'];
 console.log(dadosClienteTres);
 
 // Rest operator
-const dadosClienteQuatro: [number, string, ...string] = [
+const dadosClienteQuatro: [number, string, ...string[]] = [
   1,
   'Luiz',
   'Otávio',

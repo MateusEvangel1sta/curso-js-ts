@@ -1,7 +1,7 @@
 enum Cores {
-  VERMELHO, // 0
-  AZUL, // 1
-  AMARELO, // 2
+  VERMELHO = 10, // 10
+  AZUL = 100, // 100
+  AMARELO = 200, // 200
 }
 
 enum Cores {
@@ -19,4 +19,4 @@ export function escolhaUmaCor(cor: Cores): void {
 }
 
 escolhaUmaCor(Cores.ROXO);
-escolhaUmaCor(123456);
+// escolhaUmaCor(123456);
