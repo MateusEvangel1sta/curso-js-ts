@@ -13,7 +13,12 @@ const dadosClienteTres: [number, string, string?] = [1, 'Luiz'];
 console.log(dadosClienteTres);
 
 // Rest operator
-const dadosClienteQuatro: [number, string, ...string] = [1, 'Luiz', 'Otávio', 'Miranda'];
+const dadosClienteQuatro: [number, string, ...string] = [
+  1,
+  'Luiz',
+  'Otávio',
+  'Miranda',
+];
 console.log(dadosClienteQuatro);
 
 // Tupla imutável (recomendado)
