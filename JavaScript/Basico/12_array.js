@@ -17,4 +17,10 @@ console.log(alunos);
 alunos.unshift('Carolina');
 console.log(alunos);
 
-// continue
+alunos.shift();
+console.log(alunos);
+
+alunos.pop();
+console.log(alunos);
+
+console.log(alunos.slice(0, 3));
